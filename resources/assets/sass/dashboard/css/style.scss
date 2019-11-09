@@ -1,0 +1,138 @@
+.footer {
+    left: calc(100vw - 89%);
+}
+.StripeElement {
+    box-sizing: border-box;
+  
+    height: 40px;
+    width: 100%;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+  
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
+// style body
+  .header-fixed {
+	overflow: hidden;
+	background-image:  url('/images/Earth_and_Moon.jpg');
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+    .t-header {
+      background: none;
+      .t-header-brand-wrapper {
+        background: none;
+      }
+    }
+    .page-content-wrapper {
+			background: none;
+			border-left: 0;
+    }
+    .page-body {
+			background: none;
+			.sidebar {
+				background: none;
+				.navigation-menu {
+				li.active {
+					background: none;
+					border-radius: 20px;
+					margin: 10px 0px;
+					a {
+						background: rgba(255, 255, 255, 0.35);
+						border-radius: 20px;
+						margin-right: 77px;
+						margin-left: 34px;
+						padding-left: 17px;
+						padding-top: 0;
+						padding-bottom: 0;
+						.link-title {
+							color: #fff;
+							margin: 0px;
+							border-radius: 20px;
+							width: 100%;
+							font-size: 15px;
+							font: 15px/26px "OpenSans-Regular","Helvetica Neue",Arial,Helvetica,sans-serif;
+							font-weight: bold;
+						}
+					}
+				}
+				li {
+					a {
+						.link-title {
+							color: #fff;
+						}
+					}
+				}
+				li.nav-category-divider:first-child {
+					background:none;
+				}
+				}
+				.sidebar_footer {
+		
+				}
+			}
+			.footer {
+				.tag-a {
+					border:1px solid rgba(255,255,255,.4);
+					border-radius: 3px;
+					padding: 15px 50px;
+					background: rgba(255, 255, 255, .15);
+					color: rgba(255, 255, 255, 3.15);
+				}
+				.copyRight {
+					margin-left: 20px;
+					color: #fff;
+					font-size: 16px;
+					border-right: 1px solid #fff;
+					padding-right: 10px;
+					vertical-align: middle;
+				}
+				.text-copyRight {
+					margin-left: 10px;
+					color: #fff;
+					font-size: 16px;
+					padding-right: 10px;
+					vertical-align: middle;
+				}
+			}
+    }
+  }
+  .sidebar-minimized {
+	.sidebar {
+		opacity: 0;
+	}
+	.t-header {
+		.t-header-brand-wrapper {
+			background: none;
+		}
+	}
+  }
+
+  .authentication-theme {
+	  background-image: url('images/background.jpg');
+	.auth-style_2 {
+		.banner-section {
+
+		}
+	}
+  }

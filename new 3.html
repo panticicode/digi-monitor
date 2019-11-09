@@ -1,0 +1,203 @@
+C:\wamp64\www\cms\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php
+C:/wamp64/bin/apache/apache2.4.39/conf/extra
+$originalWhereCount = !empty($query->wheres) ? count($query->wheres) : 0;
+Oblast 18 lekcija 7
+<!----CREATE NEW LARAVEL PROJECT--------->
+composer create-project --prefer-dist laravel/laravel onetoone 5.2.29
+<!--REQUIRE LARAVEL FORM IF NOT ADDED--->
+composer require laravelcollective/html
+tb_provider_type
+php artisan make:controller PostController//CREATE NEW FILE IN LARAVEL
+php artisan make:controller  --resource PostController//CREATE NEW FILE IN LARAVEL 'CRUD'
+php artisan make:migration create_posts_table --create="tb_provider_type"//CREATE TABLE 'posts'
+php artisan make:migration add_is_admin_column_to_post_tables --table=posts//CREATE COLUMN IN TABLES
+php artisan make:migration add_deleted_at_column_to_posts_tables --table=posts//CREATE COLUMN IN TABLES
+php artisan migrate:rollback//DROP LAST COMMAND TABLE
+php artisan migrate:reset//DROP ALL TABLES IN DATABASE
+php artisan migrate:refresh//DROP ALL TABLES IN DATABASE AND CREATE AGAIN
+php artisan // FIND ALL COMMANDS
+php artisan migrate//CREATE TABLE MIGRATION
+/************************************************************/
+IF YOU NEED DELETE MIGRATION FROM FOLDER YOU NEED CALL FIRST 
+			php artisan migrate:reset because MIGRATION CREATE IN migration db_table
+THEN YOU NEED DELETE FILE FROM FOLDER
+<!----IN LARAVEL RETURN STATMENT RETURN ONLY ONE VALUE--------->
+	
+<!----TINKER--------->
+php artisan tinker //call tinker
+<!----CREATE NEW RECORD IN DB_TABLE--------->
+$post = App\Post::create(['title'=>'PHP post from tinker','content'=>'PHP content form tinker']);
+<!----CRYPTED PASSWORD--------->
+App\User :: create(['name'=>'Test','email'=>'test@mail','password'=>bcrypt("123")]); 
+<!----SEE WHAT'S CREATED--------->
+$post->enter
+$post = new  App\Post();//CREATE NEW OBJECT
+$post //SEE WHAT'S CREATED*
+$post->title = "New Title form this object"//ASSIGN VALUE TO COLUMN DB_TABLE OF NEW CREATED OBJECT IN DB
+$post//SEE WHAT'S CREATED*
+$post->content = "Yeah baby I\'m coding and doing awesome "
+$post = App\Post::find(4);//FIND BY ID	
+$post = App\Post::where('id', 4); //FIND BY ID WHIT WHERE CLAUSE	
+$post = App\Post::whereId('4')->first();//FIND BY ID WHIT WHERE CLAUSE	
+/**********UPDATE--------->
+$post = App\Post :: find(3)//FIND WHAT WE HAVE UPDATED
+$post->title = "updated record with id 3";
+=> "updated record with id 3"
+$post->content= "updated record content with id 3";
+=> "updated record content with id 3"
+$post->save();//UPDATE
+/********DELETE--------->
+$post->delete();
+=> true
+>>> $post = App\Post :: onlyTrashed()
+=> Illuminate\Database\Eloquent\Builder {#634}
+>>> $post->forceDelete();
+=> 1
+<!----LOGIN--------->
+php artisan make:auth
+
+php artisan config:cache
+php artisan config:clear
+<!----SEND MAIL IN LARAVEL--------->
+composer require guzzlehttp/guzzle
+<!----GIT--------->
+q /****EXIT FROM GIT LOG*****/
+git init <!----INITIALIZE GIT TO WORK--------->
+git reset --hard (commit)/****VBRISE IDHE ISTA IMA*****/
+<!------------ERROR 404---505----PROBLEMS------------>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+ErrorDocument 404 index.php
+<!------------ERROR 404---505----PROBLEMS------------>
+<!----or create a new repository on the command line
+echo "# examples" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/panticicode/examples.git
+git push -u origin master
+
+####…or push an existing repository from the command line
+git remote add origin https://github.com/panticicode/examples.git
+git push -u origin master
+
+<!----GIT CONFIG--------->
+git init
+git config user.name "someone"
+git config user.email "someone@someplace.com"
+git add *
+git commit -m "some init msg"
+git remote add origin https://github.com/panticicode/examples.git
+git push -u origin master
+<!----END GIT CONFIG--------->
+https://github.com/panticicode/codeapp.git
+<!----BRANCHES--------->
+git checkout -b (brounch)/****create new branch******/
+git merge newcategory/*****add new branch to master branch*******/
+git branch -d newcategory/****DELETE BRANCH******/
+git checkout (brounch)
+<!----GULP----->
+npm install --global gulp
+<!----GULP---INSTALL ELIXIR-->
+npm install laravel-elixir --save-dev
+<!------------ELIXIR ZEZA------------->
+npm install --global --production windows-build-tools
+
+npm --add-python-to-path='true' --debug install --global windows-build-tools
+
+npm install node-gyp
+
+<!--------*COMPOSER ISSUE*----------->
+$originalWhereCount = !empty($query->wheres) ? count($query->wheres) : 0;
+
+19 - 20
+<!--import database via ssh----->
+mysql -p -u user_name database_name < file.sql
+<!--export database via ssh-->
+mysql -p -u user_name database_name > file.sql
+<!----CREATE NEW FILE IN CMD----->
+echo some-text  > filename.txt
+<!------RENAME FILE-->
+rename test.txt hope.txt
+<!------------------>
+https://swe03.stablehost.com:2083/
+user tehnokon
+pass 1Y20b4qbNq
+site key 6LcDPbEUAAAAAB0FcQUuFvrJaCsdHHo2QKg_UB0k
+secret key 6LcDPbEUAAAAADWhZ9kn17R38gXLiCm7m5_ytqZu
+<!--------WEBHOSTING RS---------->
+codeapppro
+T=kD^!A7^1
+MFX&?(eW#ne;
+git remote add origin https://github.com/panticicode/codeapp.git
+<!---------GO DADDY----------->
+npm config set scripts-prepend-node-path true
+https://www.dxblocksmith.com:2083/cpsess5954496512/frontend/paper_lantern/index.html
+<!------COPY FILES--->
+cp .env.example .env
+<!---MOVE FOLDER--->
+mv public/* ~/public_html/laravel
+<!---Remove--->
+<!-------SEED--------->
+IN file DatabaseSeeder.php must uncommented line for run SEED TEMPOERLY
+<!---------CREATE NEW SEEDER FILE---------->
+php artisan make:seeder UsersTableSeeder
+<!----------EXECUTE SEEDER-----------> 
+php artisan db:seed
+factory(App\User::class, 20)->create();
+<!-------FACTORY-------->
+
+user - psof
+password - i$AFls4T8m9l
+I copied code for you to this directory 
+http://psof.com/test1/ - please use this directory as the other one is our productions
+
+
+
+Hi there, 
+I am writing this letter to you because I'm interested in this job.. 
+I’m new on upwork but I have experience in that field. My primary laguage is PHP.
+This is some of my project like CMS system
+https://my-web-blog32.000webhostapp.com/gallery/
+ https://pantici22.000webhostapp.com/
+https://pinecones.000webhostapp.com
+http://my-portfolio-run.epizy.com
+http://placewhenbeautybegins.epizy.com
+http://lineweb.epizy.com
+I’m looking forward to hearing from you.
+Kind regards 
+Ivan Pantic 
+
+
+
+
+
+ivan@realtime9.com
+UgdbTG_C3w=W
+ftp.realtime9.com
+http://realtime9.com/CHEAPHOLIDAYS.HOLIDAY-IVAN/
+
+
+https://login.konsoleh.co.za/cas/login?service=https%3A%2F%2Fsecure.konsoleh.co.za%2Flogin.php
+chikatinelson@yahoo.co.uk
+Srcadmin@100
+
+ftp/ssh
+host doxagroup.co.za
+user doxagvfwua
+pass w3E3OvdNBxxCE7xkF6lb
+
+
+
+
+
+
+'full_name'=>'Test Tetsticccc', 'date_of_birth'=>'12.3.22034', 'gender'=>'male', 'phone'=>'23543634', 'email'=>'ASDASDASD', 'nationality'=>'ASFASFSD', 'address'=>'', 'suburb'=>'', 'employment'=>'', 'occupation'=>'sdgsdg', 'tither'=>'sfgsdgsg', 'weekly_tither'=>'sfdsfsdgsdg','monthly_tither'=>'sdgsdg', 'marital_status'=>'', 'weeding_date'=>'', 'born_again'=>'', 'baptized'=>'','tongues'=>'asfsddsgsdg' ,'sunday_attendance'=>'asdasdasd', 'bible_study'=>'', 'tuesday_service'=>'', 'friday_prayers'=>'','night_vigil'=>'asdafa', 'pregnant'=>'n/a', 'delivery_date'=>'12.3.52941'
+
+
+
+
